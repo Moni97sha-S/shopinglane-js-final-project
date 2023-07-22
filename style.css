@@ -96,13 +96,14 @@ ul{
 }
 #searchBox{
     width:100%;
-    height:100%;
+    height: 100%;
     border-radius: 5px;
     box-sizing: border-box;
     color:black;
     background-color:rgb(245, 242, 242);
     border: 1px solid rgb(245, 242, 242);
     outline:none;
+    display:inline-block;
     padding:10px 24px 8px 48px;
     /* transform: translateX(100%); */
 }
@@ -475,11 +476,40 @@ footer > div:first-of-type{
     }
 }
 @media screen and (max-width: 800px){
-    .serach{
+    .rightHeader{
+    width: 40%;
+    }
+    .search{
         margin-right: 30px;
     }
     #searchBox{
         width:80%;
+    }
+    /* Project Logo */
+    #edyodaLogo {
+        display:none;
+    }
+     /* Footer Tags */
+     footer {
+        display: flex;
+    }
+    
+    footer > div {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        padding-right: 0px;
+        padding-left: 20px;
+    }
+    
+    .footerDiv{
+        display: flex;
+        /* gap: 30px 20px; */
+        justify-content: space-between;
+        flex-direction: column;
+        width: 60%;
+    }
+    .footerHeading, .linkFooter{
+        font-size: 14px;
     }
 }
 @media screen and (max-width: 600px){
@@ -487,9 +517,12 @@ footer > div:first-of-type{
         padding: 5px 35px;
         width: 100%;
     }
+    .rightHeader{
+        width: 10%;
+        }
     .search {
         display: inline-block;
-        width: 15%;
+        width: 5%;
         color:transparent;
     }
     .search > i{
@@ -500,6 +533,32 @@ footer > div:first-of-type{
         left:-10px;
         transform:translateY(-50%); 
     }
+    #searchBox{
+        display: none;
+    }
+     /* Footer Tags */
+     footer {
+        display: flex;
+    }
+    
+    footer > div {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        padding-right: 0px;
+        padding-left: 20px;
+    }
+    
+    .footerDiv{
+        display: flex;
+        /* gap: 30px 20px; */
+        justify-content: space-between;
+        flex-direction: column;
+        width: 50%;
+    }
+    .footerHeading, .linkFooter{
+        font-size: 14px;
+    }
+    
 }
 @media screen and (max-width: 500px){
     /* Header Tag */
@@ -516,10 +575,14 @@ footer > div:first-of-type{
         justify-content: start;
         align-items: center;
     }
+    .rightHeader{
+        width: 50%;
+    }
     .logo {
         font-size: 35px;
         font-weight: 400;
         margin: 0px;
+        margin-right:30px;
     }
     .logo > a{
         text-decoration: none;
@@ -534,8 +597,9 @@ footer > div:first-of-type{
     }
     .rightHeader{
         display: flex;
-        padding: 0 120px;
-        font-size:0px;
+        justify-content: space-between;
+        padding: 0 100px;
+        font-size:20px;
         position: relative;
     }
     ul{
@@ -563,17 +627,20 @@ footer > div:first-of-type{
         flex-wrap: nowrap;
     }
     .search {
-        display: none;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
     }
     .search > i{
-        display: inline-block;
+        left: 150px;
     }
     #searchBox{
-         transform: translateX(0%);
+         /* transform: translateX(0%); */
+         display: none;
     }
     .cart{
-        margin-right: 0;
-        right: 20px;
+        margin-right: 130px;
+        right: 50px;
     }
     .cart-size{
         font-size: 20px;
@@ -589,20 +656,22 @@ footer > div:first-of-type{
     }
     .profile {
         font-size: 30px;
+        margin-right: 20px;
         width: 20%;
         height: 20%;
         display: flex;
         align-items: center;
         position: absolute;
         top: 10px;
-        right:60px;
+        right:10px;
     }
     .hamburger{
         display: block;
         padding: 0;
+        margin-left: 10px;
         position: absolute;
         /* left: 20px; */
-        right: 20px;
+        right: 0px;
     }
     /* Main Tag */
     main{
@@ -691,6 +760,7 @@ footer > div:first-of-type{
     }
     
     footer > div {
+        margin-top: 20px;
         margin-bottom: 40px;
         padding-right: 0px;
         padding-left: 20px;
@@ -701,7 +771,10 @@ footer > div:first-of-type{
         /* gap: 30px 20px; */
         justify-content: space-between;
         flex-direction: column;
-        width: 50%;
+        width: 40%;
+    }
+    .footerHeading, .linkFooter{
+        font-size: 14px;
     }
     /* Checkout page */
     #cartContent > div:first-of-type {
@@ -722,5 +795,94 @@ footer > div:first-of-type{
     }
     .section-heading{
         font-size: 20px;
+    }
+}
+@media screen and (max-width: 450px){
+    nav.headerFlex{
+        padding-inline: 50px;
+        width: 100%;
+    }
+    .logo{
+        margin-right: 2px;
+    }
+    .logo > a {
+        margin-left:350px;
+    }
+    .search > i{
+        left: 60px;
+    }
+    #searchBox{
+         /* transform: translateX(0%); */
+         display: none;
+    }
+    .rightHeader{
+        margin-right: 350px;
+    }
+    .cart{
+        /* margin-right: 0; */
+        right: 1px;
+    }
+    .cart-size{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 410px){
+    nav.headerFlex{
+        padding-inline: 50px;
+    }
+    .logo{
+        margin-right: 20px;
+    }
+    .logo > a {
+        margin-left:500px;
+    }
+    .search > i{
+        left: 50px;
+    }
+    #searchBox{
+         display: none;
+    }
+    .rightHeader{
+        margin: 0;
+        padding: 0;
+        margin-right: 500px;
+        padding-inline: 90px;
+        width: 60%;
+    }
+    .cart{
+        right: 10px;
+    }
+}
+@media screen and (max-width: 390px){
+    nav.headerFlex{
+        padding-inline: 50px;
+        width: 100%;
+    }
+    .logo{
+        font-size: 25px;
+        margin-right: 30px;
+    }
+    .logo > a {
+        margin-left:720px;
+    }
+    .search {
+        display: none;
+    }
+    #searchBox{
+         display: none;
+    }
+    .rightHeader{
+        margin-right: 700px;
+        padding-inline: 10px;
+        justify-content: space-around;
+    }
+    .cart{
+        right: -5px;
+    }
+    .profile{
+        right: 50px;
+    }
+    .hamburger{
+        right: 20px;
     }
 }
